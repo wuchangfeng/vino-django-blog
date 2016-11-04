@@ -77,8 +77,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
 DATABASES = {
     'default': {
@@ -86,10 +84,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'mysite.sqlite3'),
     }
 }
-
-
-# Internationalization
-# https://docs.djangoproject.com/en/1.8/topics/i18n/
 
 LANGUAGE_CODE = 'zh-hans'
 
@@ -114,14 +108,8 @@ MESSAGE_TAGS = {
     messages.ERROR: 'alert-danger error'
 }
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.8/howto/static-files/
-
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
-
 
 # web templates setting
 SITE_NAME = 'Vino'

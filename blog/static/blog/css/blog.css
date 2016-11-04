@@ -51,7 +51,7 @@ word-wrap: break-word;
     color: red;
 }
 .panel-title>a.category{
-    color: red;
+    color: black;
 }
 .panel-title>a.category:hover{
     opacity: 0.8;
@@ -62,7 +62,7 @@ word-wrap: break-word;
 
 
 .article-title{
-    font-size: small;
+    font-size: large;
     font-family: Microsoft YaHei,'宋体' , Tahoma, Helvetica, Arial, sans-serif;
 }
 .article-icon{
