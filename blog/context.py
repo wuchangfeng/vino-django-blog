@@ -4,9 +4,7 @@ from django.conf import settings
 
 # 全局使用参数
 def all_context(request):
-    """
-    传递全局使用的一些数据,我们引用时候，直接使用大写字符引用即可
-    """
+
     categories = Category.objects.all().order_by('-order')
     tags = Tag.objects.all().order_by('-order')
     null_count = Article.objects.filter(category__isnull=True, status='p').count()

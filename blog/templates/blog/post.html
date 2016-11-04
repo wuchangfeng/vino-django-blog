@@ -4,7 +4,7 @@
     {{ title|default:'无标题' }}
 {% endblock %}
 
-{{ title|default:'无标题' }}
+
 
 {% block content %}
     {% if article %}
@@ -69,7 +69,7 @@
             </ul>
         </nav>
 <!--配置多说评论-->
-        {% include 'blog/duoshuo.html' %}
+        {% include 'blog/comment.html' %}
     {% else %}
         <div class="alert alert-warning" role="alert">文章不存在！</div>
     {% endif %}
