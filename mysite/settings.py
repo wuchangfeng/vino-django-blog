@@ -77,6 +77,8 @@ TEMPLATES = [
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
 
+# Database
+# https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
 DATABASES = {
     'default': {
@@ -113,7 +115,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # web templates setting
 SITE_NAME = 'Vino'
-SITE_MASTER = 'woodcoding'
+SITE_MASTER = 'yeah'
 SITE_SIGNATURE = '相信爱笑的人运气不会太差！'
 SITE_PAGINATE_NUM = 10
 DUOSHUO_SHORT_NAME = 'allencode'

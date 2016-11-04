@@ -1,20 +1,38 @@
-<div class="panel panel-pithy author">
-    <div class="panel-heading avastar">
-        <!--<img src="{{site.author.avatar}}" alt="{{site.author.name}}"/>-->
-        <p>这里放头像</p>
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="{% static 'blog/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'blog/css/tools.css' %}" rel="stylesheet">
+    <link href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css"
+          rel="stylesheet">
+</head>
+
+
+<div class="right-card">
+
+    <div class="user-icon-wrapper">
+        <a><img src="http://ww3.sinaimg.cn/large/b10d1ea5jw1f95jk0irbmj20dw0dwq3h.jpg" width="96px"
+                height="96px"></a>
+        <h2><a>Vino</a></h2>
     </div>
-    <div class="panel-body">
-       <p>这里放各种连接</p>
+    <div class="sign">
+        <p>Hello Django</p>
     </div>
-    <div class="panel-footer social">
-        <p>这里写你的格言警句，哈哈</p>
+    <div class="self-info">
+        <ul>
+            <li><a href="https://github.com/wuchangfeng">Github</a><span
+                class="right-icon fa fa-github"></span></li>
+            <li><a href="https://github.com/wuchangfeng">Weibo</a><span
+                    class="right-icon fa fa-weibo"></span></li>
+            <li><a href="https://github.com/7sDream">Mail</a><span
+                    class="right-icon fa fa-envelope"></span></li>
+        </ul>
     </div>
-</div>
-<!--分类目录-->
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h3 class="panel-title">文章分类</h3>
-    </div>
+
+    <div class="category">
     {% if categories %}
         <ul class="list-group">
             {% if null_count > 0 %}
@@ -30,26 +48,18 @@
                 </a>
             {% endfor %}
         </ul>
-    {% else %}
-        <div class="panel-body">没有分类！</div>
     {% endif %}
 </div>
 
-<!--文章标签显示-->
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h3 class="panel-title">标签列表</h3>
-    </div>
-    <div class="panel-body">
+    <div class="tags">
         {% if tags %}
             {% for tag in tags %}
                 <a href="{% url 'blog:tag' tag.pk %}" class="btn btn-default btn-sm tag" role="button">{{ tag }}</a>
             {% endfor %}
-        {% else %}
-            没有标签！
         {% endif %}
     </div>
-</div>
 
+</div>
+</html>
 
 

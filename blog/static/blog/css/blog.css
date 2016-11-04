@@ -15,9 +15,7 @@ word-wrap: break-word;
 .badge{
     border-radius: 10px;
 }
-.tag{
-    margin-bottom: 5px;
-}
+
 .panel-body{
     word-wrap: break-word;
 }
@@ -85,43 +83,6 @@ word-wrap: break-word;
 .search-group{
     margin-bottom: 20px;
 }
-
- .avatar_div {
-     display: block;
-     height: 120px;
-     width: 120px;
-     margin: 0px auto;
-     text-align:center;
- }
-
- .avatar {
-   float:left;
-   margin-right:8px;
-   padding:1px;
-   border:1px solid #cfd9e1;
-   width:120px;
-   height:120px; /*设置头像的长和宽*/
-   border-radius: 60px;/*设置头像圆角效果,在这里我直接设置了超过width/2的像素，即为圆形了*/
-   -webkit-border-radius: 60px;/*圆角效果：兼容webkit浏览器*/
-   -moz-border-radius:60px;
-   box-shadow: inset 0 -1px 0 #3333sf;/*设置头像阴影效果*/
-   -webkit-box-shadow: inset 0 -1px 0 #3333sf;
-   -webkit-transition: 0.8s;
-   -webkit-transition: -webkit-transform 0.4s ease-out;
-   transition: transform 0.8s ease-out;/*变化时间设置为0.4秒(变化动作即为下面的图像旋转360度）*/
-   -moz-transition: -moz-transform 0.8s ease-out;
- }
-
- .avatar:hover {
-   /*鼠标滑过，图像旋转*/
-   box-shadow: 0 0 10px #fff;
-   rgba(255,255,255,.6), inset 0 0 20px rgba(255,255,255,1);
-   -webkit-box-shadow: 0 0 10px #fff;
-   rgba(255,255,255,.6), inset 0 0 20px rgba(255,255,255,1);
-   transform: rotateZ(360deg);/*图像旋转360度*/
-   -webkit-transform: rotateZ(360deg);
-   -moz-transform: rotateZ(360deg);
- }
 
 #footer{
     text-align: center;
