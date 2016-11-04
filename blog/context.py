@@ -1,3 +1,5 @@
+
+#-*- coding: UTF-8 -*-
 from .models import Category, Tag, Article
 from django.conf import settings
 
