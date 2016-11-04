@@ -28,14 +28,16 @@
 
                 <div class="panel-body">
                     <div class="article">
-                        {{ article.description|striptags|safe|truncatechars:140|linebreaks }}...
-                        <a href="{% url 'blog:detail' article.pk %}" class="pull-right">阅读全文»</a>
+                        {{ article.description|striptags|safe|truncatechars:140|linebreaks }}
                     </div>
 
-                    <div class="pull-right">
-                <span class="time">
-                    <i class="fa fa-clock-o"></i> {{  article.time_last_modified|date:"Y-m-d" }}
-                </span>
+                    <div class="time">
+                        <span class="pull-left">
+                            <i class="fa fa-clock-o"></i> {{  article.time_last_modified|date:"Y-m-d" }}
+                        </span>
+                        <span class="more">
+                            <a href="{% url 'blog:detail' article.pk %}" class="pull-right">阅读全文»</a>
+                        </span>
                     </div>
                 </div>
 

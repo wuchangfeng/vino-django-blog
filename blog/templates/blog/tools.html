@@ -12,15 +12,12 @@
 
 
 <div class="right-card">
-
     <div class="user-icon-wrapper">
         <a><img src="http://ww3.sinaimg.cn/large/b10d1ea5jw1f95jk0irbmj20dw0dwq3h.jpg" width="96px"
                 height="96px"></a>
         <h2><a>Vino</a></h2>
     </div>
-    <div class="sign">
-        <p>Hello Django</p>
-    </div>
+
     <div class="self-info">
         <ul>
             <li><a href="https://github.com/wuchangfeng">Github</a><span
@@ -31,8 +28,11 @@
                     class="right-icon fa fa-envelope"></span></li>
         </ul>
     </div>
-
-    <div class="category">
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">文章分类</h3>
+    </div>
     {% if categories %}
         <ul class="list-group">
             {% if null_count > 0 %}
@@ -48,18 +48,24 @@
                 </a>
             {% endfor %}
         </ul>
+    {% else %}
+        <div class="panel-body">没有分类！</div>
     {% endif %}
 </div>
 
-    <div class="tags">
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">标签列表</h3>
+    </div>
+    <div class="panel-body">
         {% if tags %}
             {% for tag in tags %}
                 <a href="{% url 'blog:tag' tag.pk %}" class="btn btn-default btn-sm tag" role="button">{{ tag }}</a>
             {% endfor %}
+        {% else %}
+            没有标签！
         {% endif %}
     </div>
-
 </div>
+
 </html>
-
-
