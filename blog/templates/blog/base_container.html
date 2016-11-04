@@ -1,0 +1,17 @@
+﻿<!--继承导航栏在顶部页面-->
+{% extends 'blog/base.html' %}
+{% block container %}
+    <!-- bootstrap 3 的容器 container-->
+    <div id="container">
+        <div class="container page-content">
+            <!--首页内容区域左边-->
+            <div class="col-md-9 col-content">
+                {% block content %}内容区{% endblock %}
+            </div>
+            <!--首页工具区域右边-->
+            <div class="col-md-3 col-sidebar">
+                {% include 'blog/tools.html' %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

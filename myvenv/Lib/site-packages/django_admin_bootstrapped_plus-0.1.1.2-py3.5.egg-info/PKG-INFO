@@ -1,0 +1,78 @@
+Metadata-Version: 1.1
+Name: django-admin-bootstrapped-plus
+Version: 0.1.1.2
+Summary: Django Admin Bootstrapped Plus provides a vertical sidebar to the standard Django admin pages.
+Home-page: https://github.com/Wtower/django-admin-bootstrapped-plus/
+Author: George Karakostas
+Author-email: info@9-dev.com
+License: BSD-3 License
+Description: ==============================
+        Django Admin Bootstrapped Plus
+        ==============================
+        
+        *Django Admin Bootstrapped Plus* is a small Django app
+        which provides a *vertical sidebar* to the standard Django admin pages,
+        as provided by the required app
+        `Django Admin Bootstrapped <https://github.com/django-admin-bootstrapped/django-admin-bootstrapped>`_.
+        
+        The vertical sidebar provides a stack of links to all models, grouped by the installed apps.
+        
+        See `Django 9cms <https://github.com/Wtower/django-ninecms>`_ for screenshot.
+        
+        Dependencies
+        ------------
+        
+        - Python (3.4+)
+        - Django (1.8+): Web framework
+        - django-admin-bootstrapped (2.5+): provide a nicer admin interface experience
+        
+        Quick how-to
+        ------------
+        
+        This is a quick guide on how to use it.
+        
+        1. Install django-admin-bootstrapped-plus::
+        
+             $ pip install django-admin-bootstrapped-plus
+        
+           or download source and place in project root
+        
+        2. Dependencies (resolved by pip)::
+        
+             Django==1.8.7
+             django-admin-bootstrapped==2.5.6
+        
+        3. Settings
+        
+           You need to install the app in ``INSTALLED_APPS`` before admin_bootstrapped and before admin,
+           so that Django loads the templates properly::
+        
+             INSTALLED_APPS = (
+                 'admin_bootstrapped_plus',
+                 'django_admin_bootstrapped',
+                 'django.contrib.admin',
+                 # ...
+             )
+        
+        4. Start the development server and visit http://127.0.0.1:8000/admin/
+        
+        That's it.
+        
+        Footnote
+        --------
+        
+        Any contribution to the project is highly appreciated and the best will be done to respond to it.
+        
+Keywords: admin theme
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content

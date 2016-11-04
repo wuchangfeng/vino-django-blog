@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta name="theme-color" content="#eee">
+    <meta name="msapplication-TileColor" content="#eee">
+    <!--title of website-->
+    <title>{% block title %}{% endblock %}-{{ SITE_NAME|default:_('Vino') }}</title>
+    <link href="{% static 'blog/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'blog/css/blog.css' %}" rel="stylesheet">
+    <!--代码高亮风格-->
+    <link href="{% static 'blog/css/prism/prism.css' %}" rel="stylesheet">
+    <link href="{% static 'blog/css/code/github.css' %}" rel="stylesheet">
+    {% block style %}{% endblock %}
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<header id="header">
+    <div>
+        <nav id="nav" class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+                <!-- 导航栏设置-->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/blog">首页</a></li>
+                        <li><a href="/blog">归档</a></li>
+                        <li><a href="/blog">关于</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+
+<!--替换模块-->
+{% block container %}
+{% endblock %}
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="{% static 'blog/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'blog/js/prism/prism.js' %}"></script>
+<!-- color tag-->
+<script src="{% static 'blog/js/plugins/colortags.js' %}"></script>
+{% block script %}{% endblock %}
+</body>
+</html>

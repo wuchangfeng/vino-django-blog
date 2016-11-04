@@ -1,0 +1,6 @@
+{% extends 'blog/list_base.html' %}
+
+<!--注意 paginate 的写法 include 进入 paginate 模板-->
+{% block paginate %}
+    {% include 'blog/paginate.html' %}
+{% endblock %}

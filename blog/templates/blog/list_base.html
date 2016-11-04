@@ -1,0 +1,51 @@
+{% extends 'blog/base_container.html' %}
+
+<!--标题 block-->
+{% block title %}
+    {{ title|default:'无标题' }}
+{% endblock %}
+
+<!--内容 block-->
+{% block content %}
+
+    {% block info %}
+    {% endblock %}
+
+    {% load blog_paginate %}
+    {% paginate articles paginate_num %}
+
+
+    {% if articles %}
+        <!--循环 article-->
+        {% for article in articles %}
+            <div class="panel panel-default">
+
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <a href="{% url 'blog:detail' article.pk %}" class="article-title">{{ article.title }}</a>
+                    </h3>
+                </div>
+
+                <div class="panel-body">
+                    <div class="article">
+                        {{ article.description|striptags|safe|truncatechars:140|linebreaks }}...
+                        <a href="{% url 'blog:detail' article.pk %}" class="pull-right">阅读全文»</a>
+                    </div>
+
+                    <div class="pull-right">
+                <span class="time">
+                    <i class="fa fa-clock-o"></i> {{  article.time_last_modified|date:"Y-m-d" }}
+                </span>
+                    </div>
+                </div>
+
+
+            </div>
+        {% endfor %}
+
+    {% else %}
+        <div class="alert alert-warning" role="alert">什么东东都没有哦！</div>
+    {% endif %}
+    {% block paginate %}
+    {% endblock %}
+{% endblock %}
