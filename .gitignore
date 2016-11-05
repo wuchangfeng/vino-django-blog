@@ -1,7 +1,8 @@
 # Created by .ignore support plugin (hsz.mobi)
 
 # PyCharm IDE
-.idea/
+*.idea
+/myvenv
 
 ### Python template
 # Byte-compiled / optimized / DLL files
