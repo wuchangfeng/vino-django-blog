@@ -1,0 +1,15 @@
+{% extends 'blog/base_container.html' %}
+
+{% block title %}
+    {{ title|default:'无标题' }}
+{% endblock %}
+
+
+
+{% block content %}
+        <div>
+            <h2>这里可以留言啦，简陋点就用多说吧，嘿嘿！</h2>
+        </div>
+<!--配置多说评论-->
+        {% include 'blog/comment.html' %}
+{% endblock %}
