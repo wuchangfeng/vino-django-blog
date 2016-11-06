@@ -1,5 +1,6 @@
 *.pyc
 __pycache__
 myvenv
-mysqilte.sqlite3
+.idea/
+mysite.sqlite3
 .DS_Store
