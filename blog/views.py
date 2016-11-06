@@ -83,7 +83,6 @@ def about_me(request) :
     return render(request, 'blog/about_me.html')
 
 def archives(request) :
-
-    return render(request, 'blog/archives.html')
-    #return render(request, 'archives.html', {'post_list' : post_list,
-    #                                         'error' : False})
+    article_list = Article.objects.filter(status='p')
+    #return render(request, 'blog/archives.html')
+    return render(request, 'blog/archives.html', {'article_list' : article_list})
