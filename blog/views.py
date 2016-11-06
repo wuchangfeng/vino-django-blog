@@ -7,7 +7,8 @@ from django.views.generic import View
 from blog.models import Article, Category, Tag
 from django.conf import settings
 from django.http import HttpResponseRedirect
-
+from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib.staticfiles.templatetags.staticfiles import static
 
 class IndexView(ListView):
     template_name = 'blog/index.html'
@@ -78,5 +79,11 @@ class ArticleDetailView(DetailView):
         kwargs['title'] = super(ArticleDetailView, self).get_object().title
         return super(ArticleDetailView, self).get_context_data(**kwargs)
 
+def about_me(request) :
+    return render(request, 'blog/about_me.html')
 
+def archives(request) :
 
+    return render(request, 'blog/archives.html')
+    #return render(request, 'archives.html', {'post_list' : post_list,
+    #                                         'error' : False})
