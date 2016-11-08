@@ -6,6 +6,12 @@ from blog.views import about_me as about_me
 from blog.views import archives as archives
 from blog.views import comments as comments
 
+from django.conf.urls import (
+handler404, handler500
+)
+
+handler404 = 'blog.views.handler404'
+handler500 = 'blog.views.handler500'
 
 urlpatterns = [
     url(r'^$', IndexView.as_view(), name='index'),
