@@ -2,7 +2,7 @@
 
 Django 写的一个练手博客。在线演示：http://vino.pythonanywhere.com/
 
-![](http://ww1.sinaimg.cn/large/b10d1ea5jw1f9i3e3b32hj21kw0zkn3z.jpg)
+![](http://ww2.sinaimg.cn/large/b10d1ea5jw1f9o5ahcds9j21kw0zkwkp.jpg)
 
 ## 开发
 
