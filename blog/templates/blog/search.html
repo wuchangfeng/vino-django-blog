@@ -1,7 +1,7 @@
 {% extends 'blog/index_base.html' %}
 {% block info %}
     <div class="alert alert-success" role="alert">
-            <h3>搜索:“{{ query }}”的结果-共{{ articles.count }}条记录</h3>
+            <h4>包含关键字:“{{ query }}”的文章-共{{ articles.count }}篇</h4>
     </div>
 <!--paginate for search-->
 {% endblock %}
