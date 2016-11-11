@@ -49,7 +49,17 @@
                         <li><a href="/comments">留言</a></li>
                         <li><a href="/about">关于</a></li>
                     </ul>
+
+                    <form class="navbar-form navbar-right" role="search" method="get" action="{% url 'blog:search' %}" >
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="query" placeholder="Search">
+                        </div>
+                    <button type="submit"  style="background: rgb(72, 166, 72);" class="btn btn-info"><span class="glyphicon glyphicon-search"></span></button>
+                    </form>
+
                 </div>
+
+
             </div>
         </nav>
     </div>

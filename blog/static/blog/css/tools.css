@@ -2,7 +2,6 @@
     border-radius: 2px;
     background-color: rgba(0, 0, 0, 0.6);
     box-shadow: rgba(0, 0, 0, 0.25) 1px 1px 3px;
-    margin：10px 10px 10px
 }
 
 .user-icon-wrapper {
@@ -36,7 +35,6 @@
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
-    text-transform: uppercase;
     text-shadow: rgba(0, 0, 0, 0.5) 0 1px 2px;
 }
 
@@ -78,13 +76,7 @@
     list-style-type:none
 }
 
-.self-info li:first-child {
-    border-top: none;
-}
 
-.self-info li:last-child {
-    border-bottom: none;
-}
 
 .self-info li a {
     display: block;

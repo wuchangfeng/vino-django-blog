@@ -79,6 +79,24 @@ class ArticleDetailView(DetailView):
         kwargs['title'] = super(ArticleDetailView, self).get_object().title
         return super(ArticleDetailView, self).get_context_data(**kwargs)
 
+
+class SearchView(ListView):
+    template_name = 'blog/search.html'
+    context_object_name = 'articles'
+
+    def get_queryset(self):
+        query = self.request.GET['query']
+        articles = Article.objects.filter(status='p').filter(Q(body__contains=query) |
+                                          Q(title__contains=query) |
+                                          Q(description__contains=query))
+        return articles
+
+    def get_context_data(self, **kwargs):
+        kwargs['title'] = '搜索:' + self.request.GET['query']
+        kwargs['query'] = self.request.GET['query']
+        return super(SearchView, self).get_context_data(**kwargs)
+
+
 def about_me(request) :
     return render(request, 'blog/about_me.html')
 
